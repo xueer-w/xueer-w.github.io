@@ -1,0 +1,43 @@
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <set>
+using namespace std;
+
+
+string input_file = "...";
+string output_file = "..."
+
+ifstream is(input_file.c_str());
+if (!is)
+{ 
+   cerr << "Fail to open file " << ... << endl;
+   return -1;
+}
+
+ofstream os(output_file.c_str());
+if ....
+
+string line, word;
+while(getline(is, line))
+{
+  set<string> s_word;
+  istringstream iss(line.c_str());
+  while( iss >> word)
+  {
+     s_word.insert(word);
+   }
+
+   set<string>::iterator s_it;
+   for(s_it = s_word.begin();
+       s_it != s_word.end();
+       s_it++)
+   {
+       os << *s_it << " ";
+   }
+   os << endl;
+}
+
+is.close();
+os.close();
+
